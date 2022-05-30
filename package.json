@@ -1,0 +1,22 @@
+{
+  "name": "cowork-api-server",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000E\u0000x\u0000p\u0000r\u0000e\u0000s\u0000s\u0000J\u0000s\u0000S\u0000t\u0000u\u0000d\u0000y\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaejae-mac/ExpressJsStudy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaejae-mac/ExpressJsStudy/issues"
+  },
+  "homepage": "https://github.com/Jaejae-mac/ExpressJsStudy#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
