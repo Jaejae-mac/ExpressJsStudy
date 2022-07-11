@@ -4,6 +4,11 @@ const app = express();
 
 const members = require('./members');
 
+//라우터에 의해 처리되기 전에 필요한 전처리를 하는 것을
+//express에서는 미들웨어라고 부른다.
+//즉, body의 데이터를 가져오기 위해서 처리가 필요함.
+app.use(express.json());//middleware
+
 app.get('/api/members', (req,res) => {
   //const team = req.query.team;//여러 파마리터 값중 team이라는 값을 가져오기위함.
   //위의 식은 아래와 같이 표현할 수 있다.
@@ -29,6 +34,18 @@ app.get('/api/members/:id', (req,res) => {
     res.status(404).send({ message : 'There is no such member' });
   }
   
+});
+
+
+//Post 리퀘스트 보내는 방법
+//vs code 에서 rest client extentsion을 설치하면 vscode 에서 바로 
+//포스트 리퀘스트를 보낼 수 있다.
+//프로젝트 경로상에서 ".http" 확장자를 가지는 파일을 만들면 사용가능
+
+app.post('/api/members', (req,res) => {
+  const newMember = req.body;
+  members.push(newMember);
+  res.send(newMember);
 });
 
 app.listen(20010, () => {
