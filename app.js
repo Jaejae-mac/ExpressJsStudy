@@ -9,6 +9,19 @@ const members = require('./members');
 //즉, body의 데이터를 가져오기 위해서 처리가 필요함.
 app.use(express.json());//middleware
 
+// //2번째 미들웨어
+// var secondMilddleware = function(res,req,next){
+//   console.log(req.query);
+//   next();
+// };
+
+// app.use(secondMilddleware);
+
+app.use((req, res, next) => {
+  console.log(req.query);
+  next();
+});
+
 app.get('/api/members', (req,res) => {
   //const team = req.query.team;//여러 파마리터 값중 team이라는 값을 가져오기위함.
   //위의 식은 아래와 같이 표현할 수 있다.

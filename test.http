@@ -15,3 +15,15 @@ Content-Type: application/json
   "birthday" : "1995/09/27",
   "profileImage": "profile11.png"
 }
+
+###
+GET http://localhost:20010/api/members
+
+###
+GET http://localhost:20010/api/members?team=engineering
+
+###
+GET http://localhost:20010/api/members?team=sales
+
+###
+GET http://localhost:20010/api/members?team=marketing
